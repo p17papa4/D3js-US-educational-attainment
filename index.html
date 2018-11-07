@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script type="text/javascript" src="assets/sound/sound-mouseover.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </head>
   <header>
        <nav>
@@ -86,6 +87,11 @@
 	<source src="assets/sound/click.mp3"></source>
 	<source src="assets/sound/click.ogg"></source>
 </audio>
-
+<script>
+$('label,h1,h2').mouseenter(function() { 
+ 	responsiveVoice.cancel(); 
+	responsiveVoice.speak($(this).text()); 
+});
+</script>
 </body>
 </html>
